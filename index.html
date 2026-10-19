@@ -1,0 +1,885 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Con Te Odontologia Especializada | Mauá - SP</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marfim: '#F7F3EC',
+            'verde-profundo': '#23483B',
+            'verde-escuro': '#1A372D',
+            'dourado': '#D4A017',
+            'dourado-suave': '#E5B942',
+            'bege-quente': '#D8C8B2',
+            'bege-claro': '#EFE9DE',
+            'preto-puro': '#000000',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F7F3EC;
+      color: #000000;
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .gold-accent-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #D4A017, transparent);
+    }
+    .gold-border-subtle {
+      border-color: rgba(212, 160, 23, 0.25);
+    }
+    .card-hover-subtle {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-subtle:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(35, 72, 59, 0.08);
+      border-color: rgba(212, 160, 23, 0.5);
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-marfim text-preto-puro flex flex-col min-h-screen selection:bg-dourado selection:text-preto-puro">
+
+  <!-- ========================================== -->
+  <!-- 1. CABEÇALHO -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 bg-marfim/95 backdrop-blur-md border-b border-[#D8C8B2]/40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+      <!-- Logo Oficial com Preservação Rigorosa -->
+      <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-dourado rounded-lg p-1" aria-label="Con Te Odontologia Especializada - Página Inicial">
+        <img 
+          src="assets/images/logo.png" 
+          alt="Con Te Odontologia Especializada" 
+          class="h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        />
+      </a>
+
+      <!-- Navegação Desktop (Âncoras) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#inicio" class="text-preto-puro hover:text-verde-profundo transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-dourado hover:after:w-full after:transition-all">Início</a>
+        <a href="#a-clinica" class="text-preto-puro hover:text-verde-profundo transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-dourado hover:after:w-full after:transition-all">A clínica</a>
+        <a href="#especialidades" class="text-preto-puro hover:text-verde-profundo transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-dourado hover:after:w-full after:transition-all">Especialidades</a>
+        <a href="#equipe" class="text-preto-puro hover:text-verde-profundo transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-dourado hover:after:w-full after:transition-all">Equipe</a>
+        <a href="#contato" class="text-preto-puro hover:text-verde-profundo transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-dourado hover:after:w-full after:transition-all">Contato</a>
+      </nav>
+
+      <!-- Botão Header e Menu Mobile -->
+      <div class="flex items-center gap-4">
+        <a 
+          href="https://wa.me/5511972044184" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hidden sm:inline-flex items-center justify-center px-6 py-3 rounded-full bg-verde-profundo text-marfim hover:bg-verde-escuro font-medium text-sm transition-all shadow-sm hover:shadow hover:ring-2 hover:ring-dourado/50 focus:outline-none focus:ring-2 focus:ring-verde-profundo"
+        >
+          <span>Agendar avaliação</span>
+          <svg class="w-4 h-4 ml-2 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+
+        <!-- Botão Mobile Menu Trigger -->
+        <button 
+          type="button" 
+          onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" 
+          class="md:hidden p-2 rounded-lg text-verde-profundo hover:bg-bege-claro focus:outline-none focus:ring-2 focus:ring-dourado"
+          aria-label="Abrir Menu de Navegação"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navegação Mobile Dropdown -->
+    <div id="mobile-nav" class="hidden md:hidden bg-marfim border-b border-bege-quente px-6 py-6 space-y-4">
+      <a href="#inicio" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="block text-base font-medium text-preto-puro hover:text-verde-profundo py-1">Início</a>
+      <a href="#a-clinica" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="block text-base font-medium text-preto-puro hover:text-verde-profundo py-1">A clínica</a>
+      <a href="#especialidades" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="block text-base font-medium text-preto-puro hover:text-verde-profundo py-1">Especialidades</a>
+      <a href="#equipe" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="block text-base font-medium text-preto-puro hover:text-verde-profundo py-1">Equipe</a>
+      <a href="#contato" onclick="document.getElementById('mobile-nav').classList.add('hidden')" class="block text-base font-medium text-preto-puro hover:text-verde-profundo py-1">Contato</a>
+      <a 
+        href="https://wa.me/5511972044184" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="block w-full text-center px-6 py-3 rounded-full bg-verde-profundo text-marfim font-medium text-sm mt-4"
+      >
+        Agendar avaliação pelo WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- ========================================== -->
+    <!-- 2. HERO — PRIMEIRA IMPRESSÃO (Assimetria Editorial) -->
+    <!-- ========================================== -->
+    <section id="inicio" class="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Coluna Textual Editorial -->
+          <div class="lg:col-span-7 space-y-8 z-10">
+            <!-- Badge de acolhimento -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-bege-claro border border-bege-quente/60 text-xs tracking-wider uppercase font-semibold text-verde-profundo">
+              <span class="w-2 h-2 rounded-full bg-dourado"></span>
+              Odontologia Especializada em Mauá - SP
+            </div>
+
+            <!-- Título Principal -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal text-preto-puro leading-[1.1] tracking-tight">
+              Seu sorriso merece <span class="italic font-normal text-verde-profundo">cuidado</span> em cada detalhe.
+            </h1>
+
+            <!-- Texto de Apoio Verbatim -->
+            <p class="text-lg sm:text-xl text-preto-puro/85 font-light leading-relaxed max-w-2xl">
+              Na Con Te Odontologia Especializada, você encontra diferentes especialidades da Odontologia em um só lugar, com atenção à sua saúde bucal e cuidado em cada etapa.
+            </p>
+
+            <!-- Ações Principais -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a 
+                href="https://wa.me/5511972044184" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-dourado text-preto-puro font-semibold text-base transition-all hover:bg-dourado-suave shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-dourado"
+              >
+                <span>Agendar avaliação</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+              <a 
+                href="#especialidades" 
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-verde-profundo/30 bg-transparent text-verde-profundo hover:bg-bege-claro font-medium text-base transition-all focus:outline-none focus:ring-2 focus:ring-verde-profundo"
+              >
+                Conheça nossas especialidades
+              </a>
+            </div>
+
+            <!-- Mini destaque editorial de acolhimento -->
+            <div class="pt-6 border-t border-bege-quente/60 flex flex-wrap items-center gap-8 text-xs text-preto-puro/75">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-dourado" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Atendimento humanizado e atencioso</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-dourado" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>8 especialidades integradas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Visual Fotográfica Editorial -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Elemento decorativo geométrico discreto em dourado -->
+              <div class="absolute -top-4 -right-4 w-full h-full border border-dourado/40 rounded-2xl -z-0"></div>
+              
+              <!-- Container de Imagem Principal -->
+              <div class="relative z-10 rounded-2xl overflow-hidden bg-bege-claro shadow-lg aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]">
+                <img 
+                  src="assets/images/hero-care.jpg" 
+                  alt="Atendimento acolhedor e tranquilo na Con Te Odontologia" 
+                  class="w-full h-full object-cover object-center"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-verde-profundo/40 via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-marfim text-xs bg-verde-profundo/85 backdrop-blur-sm p-3 rounded-xl border border-dourado/30 flex items-center justify-between">
+                  <span class="font-medium tracking-wide">Ambiente de escuta e serenidade</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor Fino em Dourado -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="gold-accent-line opacity-60"></div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. APRESENTAÇÃO DA CLÍNICA -->
+    <!-- ========================================== -->
+    <section id="a-clinica" class="py-20 lg:py-28 bg-bege-claro/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <span class="text-xs uppercase tracking-widest text-dourado font-bold">Nossa Filosofia</span>
+          
+          <!-- Texto Verbatim Briefing -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-preto-puro font-normal leading-snug">
+            “Aqui, cuidamos do seu sorriso com <span class="text-verde-profundo italic">excelência</span>, <span class="text-verde-profundo italic">tecnologia</span> e muito <span class="text-verde-profundo italic">carinho</span>!”
+          </h2>
+          
+          <div class="w-16 h-0.5 bg-dourado mx-auto mt-6"></div>
+
+          <p class="text-base sm:text-lg text-preto-puro/80 leading-relaxed font-light pt-2">
+            Acreditamos que cada pessoa merece uma atenção única. Ao reunir diferentes especialidades em um espaço contemporâneo e acolhedor, planejamos cada cuidado com serenidade e respeito ao seu tempo, garantindo comodidade e segurança em todas as fases da sua saúde bucal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. ESPECIALIDADES ODONTOLÓGICAS (8 Especialidades) -->
+    <!-- ========================================== -->
+    <section id="especialidades" class="py-20 lg:py-28 bg-marfim">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- Header da Seção -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="space-y-3 max-w-2xl">
+            <span class="text-xs uppercase tracking-widest text-dourado font-bold">Cuidado Integrado</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-preto-puro">
+              Especialidades Odontológicas
+            </h2>
+            <p class="text-base text-preto-puro/80 font-light">
+              Diferentes áreas da odontologia reunidas em um só lugar para acompanhar cada fase do seu sorriso.
+            </p>
+          </div>
+          <a 
+            href="https://wa.me/5511972044184" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 text-sm font-semibold text-verde-profundo hover:text-dourado transition-colors pb-1 border-b border-verde-profundo/30"
+          >
+            <span>Dúvidas sobre tratamentos? Fale conosco</span>
+            <svg class="w-4 h-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grade com as 8 Especialidades Estritas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- 1. Clínica Geral -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Clínica Geral</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Diagnóstico preventivo, profilaxia e cuidados fundamentais para a manutenção contínua da saúde bucal.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Avaliação personalizada</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 2. Ortodontia -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Ortodontia</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Alinhamento e harmonia da oclusão dental, unindo estética e bem-estar funcional com precisão.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Harmonia e oclusão</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 3. Implantodontia -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Implantodontia</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Recuperação da mastigação e da estabilidade dentária com técnicas modernas e planejamento cuidadoso.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Reabilitação e segurança</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 4. Endodontia -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Endodontia</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Tratamento do canal dentário com precisão e suavidade para a preservação integral do elemento natural.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Preservação natural</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 5. Periodontia -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Periodontia</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Saúde das gengivas e tecidos de sustentação dental, prevenindo inflamações e assegurando estabilidade.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Saúde gengival</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 6. Harmonização Orofacial -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Harmonização Orofacial</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Equilíbrio estético e funcional entre os traços do rosto e o sorriso, respeitando sua naturalidade.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Equilíbrio e proporção</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 7. Odontopediatria -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Odontopediatria</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Acolhimento dedicado e paciente para crianças, construindo memórias positivas de cuidado desde a infância.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Cuidado na infância</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+          <!-- 8. Prótese Odontológica -->
+          <div class="p-8 rounded-2xl bg-marfim border border-bege-quente/70 card-hover-subtle flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-bege-claro flex items-center justify-center text-verde-profundo mb-6 border border-bege-quente/40">
+                <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif text-preto-puro font-medium mb-3">Prótese Odontológica</h3>
+              <p class="text-sm text-preto-puro/75 font-light leading-relaxed">
+                Restauração da função mastigatória, fonética e estética do sorriso com conforto e durabilidade.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-bege-quente/40 flex items-center justify-between text-xs text-verde-profundo font-semibold">
+              <span>Função e estética</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. CONHEÇA A GLAUCE (Composição Editorial Humana) -->
+    <!-- ========================================== -->
+    <section id="equipe" class="py-20 lg:py-28 bg-bege-quente/25 border-y border-bege-quente/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Retrato Provisório com enquadramento nobre -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="relative max-w-md mx-auto">
+              <div class="absolute -bottom-4 -left-4 w-full h-full border border-dourado/40 rounded-2xl -z-0"></div>
+              <div class="relative z-10 rounded-2xl overflow-hidden bg-bege-claro shadow-md aspect-[3/4]">
+                <img 
+                  src="assets/images/dra-glauce.jpg" 
+                  alt="Espaço preparado para o retrato da Glauce" 
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Apresentação Textual -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-marfim border border-bege-quente text-xs tracking-wider uppercase font-semibold text-verde-profundo">
+              <span class="w-1.5 h-1.5 rounded-full bg-dourado"></span>
+              Apresentação
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-preto-puro leading-tight">
+              Cuidado atento liderado por quem compreende <span class="text-verde-profundo italic">você</span>.
+            </h2>
+            
+            <div class="space-y-4 text-base sm:text-lg text-preto-puro/85 font-light leading-relaxed">
+              <p>
+                A Con Te Odontologia Especializada nasceu do propósito de oferecer um atendimento verdadeiramente humano, onde cada paciente é recebido com carinho, escuta e dedicação integral.
+              </p>
+              <p>
+                Sob a coordenação e o olhar atento da Glauce, a clínica busca transformar a experiência odontológica em um momento de tranquilidade, confiança e cuidado personalizado para você e sua família em Mauá.
+              </p>
+            </div>
+
+            <!-- Box com detalhes de acolhimento -->
+            <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-marfim border border-bege-quente/60">
+                <span class="text-xs uppercase tracking-wider text-dourado font-bold block mb-1">Acolhimento</span>
+                <p class="text-sm text-preto-puro/80 font-normal">Escuta ativa para entender suas necessidades e preferências.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-marfim border border-bege-quente/60">
+                <span class="text-xs uppercase tracking-wider text-dourado font-bold block mb-1">Integração</span>
+                <p class="text-sm text-preto-puro/80 font-normal">Planejamento conjunto com foco na sua saúde e bem-estar.</p>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a 
+                href="https://wa.me/5511972044184" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-verde-profundo text-marfim hover:bg-verde-escuro font-medium text-sm transition-all focus:outline-none focus:ring-2 focus:ring-verde-profundo"
+              >
+                <span>Falar diretamente conosco</span>
+                <svg class="w-4 h-4 ml-2 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. A CLÍNICA EM IMAGENS (Galeria com Proporções Consistentes) -->
+    <!-- ========================================== -->
+    <section class="py-20 lg:py-28 bg-marfim">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-dourado font-bold">Ambientes</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-preto-puro">
+            A clínica em imagens
+          </h2>
+          <p class="text-base text-preto-puro/80 font-light">
+            Espaços planejados para proporcionar conforto, luz natural e uma experiência de consulta serena.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Imagem 1: Consulta / Acolhimento -->
+          <div class="group relative rounded-2xl overflow-hidden bg-bege-claro shadow-sm border border-bege-quente/60 aspect-[4/3]">
+            <img 
+              src="assets/images/clinic-environment.jpg" 
+              alt="Ambiente de consulta acolhedor" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-preto-puro/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute bottom-5 left-5 right-5 text-marfim">
+              <p class="text-xs uppercase tracking-wider text-dourado font-semibold">Consultório</p>
+              <p class="text-base font-serif">Ambiente privativo e tranquilo</p>
+            </div>
+          </div>
+
+          <!-- Imagem 2: Diálogo e Escuta -->
+          <div class="group relative rounded-2xl overflow-hidden bg-bege-claro shadow-sm border border-bege-quente/60 aspect-[4/3]">
+            <img 
+              src="assets/images/hero-care.jpg" 
+              alt="Cuidado atencioso no atendimento" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-preto-puro/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute bottom-5 left-5 right-5 text-marfim">
+              <p class="text-xs uppercase tracking-wider text-dourado font-semibold">Atendimento</p>
+              <p class="text-base font-serif">Atenção e calma em cada passo</p>
+            </div>
+          </div>
+
+          <!-- Imagem 3: Detalhes e Conforto -->
+          <div class="group relative rounded-2xl overflow-hidden bg-bege-claro shadow-sm border border-bege-quente/60 aspect-[4/3]">
+            <img 
+              src="assets/images/clinic-environment.jpg" 
+              alt="Instalações organizadas e acolhedoras" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-preto-puro/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute bottom-5 left-5 right-5 text-marfim">
+              <p class="text-xs uppercase tracking-wider text-dourado font-semibold">Recepção e Convivência</p>
+              <p class="text-base font-serif">Conforto desde a sua chegada</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. DIFERENCIAIS E EXPERIÊNCIA (4 Pilares da Marca) -->
+    <!-- ========================================== -->
+    <section class="py-20 lg:py-28 bg-verde-profundo text-marfim relative overflow-hidden">
+      <!-- Ornamento Dourado Sutil de Fundo -->
+      <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full border border-dourado/10 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-96 h-96 rounded-full border border-dourado/10 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-dourado font-bold">Pilares Con Te</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-marfim">
+            Diferenciais e experiência
+          </h2>
+          <p class="text-base text-marfim/80 font-light">
+            A união entre dedicação humana e planejamento odontológico sob medida.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pilar 1: Acolhimento -->
+          <div class="p-8 rounded-2xl bg-verde-escuro/60 border border-dourado/20 space-y-4">
+            <span class="text-2xl font-serif text-dourado font-bold">01</span>
+            <h3 class="text-xl font-serif text-marfim">Acolhimento genuíno</h3>
+            <p class="text-sm text-marfim/80 font-light leading-relaxed">
+              Atendimento focado em ouvir você com tranquilidade, eliminando a pressa e oferecendo um ambiente seguro.
+            </p>
+          </div>
+
+          <!-- Pilar 2: Cuidado com o Sorriso -->
+          <div class="p-8 rounded-2xl bg-verde-escuro/60 border border-dourado/20 space-y-4">
+            <span class="text-2xl font-serif text-dourado font-bold">02</span>
+            <h3 class="text-xl font-serif text-marfim">Cuidado com o sorriso</h3>
+            <p class="text-sm text-marfim/80 font-light leading-relaxed">
+              Atenção minuciosa à harmonia estética aliada à estabilidade e funcionalidade da sua mastigação.
+            </p>
+          </div>
+
+          <!-- Pilar 3: Especialidades Integradas -->
+          <div class="p-8 rounded-2xl bg-verde-escuro/60 border border-dourado/20 space-y-4">
+            <span class="text-2xl font-serif text-dourado font-bold">03</span>
+            <h3 class="text-xl font-serif text-marfim">Tudo em um só lugar</h3>
+            <p class="text-sm text-marfim/80 font-light leading-relaxed">
+              Diferentes especialidades integradas para facilitar sua rotina sem a necessidade de múltiplos deslocamentos.
+            </p>
+          </div>
+
+          <!-- Pilar 4: Atenção ao Paciente -->
+          <div class="p-8 rounded-2xl bg-verde-escuro/60 border border-dourado/20 space-y-4">
+            <span class="text-2xl font-serif text-dourado font-bold">04</span>
+            <h3 class="text-xl font-serif text-marfim">Atenção constante</h3>
+            <p class="text-sm text-marfim/80 font-light leading-relaxed">
+              Acompanhamento pontual em cada etapa do seu plano de tratamento, com clareza em todas as orientações.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-14 text-center">
+          <a 
+            href="https://wa.me/5511972044184" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-dourado text-preto-puro font-semibold text-base hover:bg-dourado-suave transition-all shadow-sm"
+          >
+            <span>Conversar com a equipe</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. PERGUNTAS FREQUENTES (FAQ) -->
+    <!-- ========================================== -->
+    <section class="py-20 lg:py-28 bg-marfim">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-dourado font-bold">Dúvidas Frequentes</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-preto-puro">
+            Perguntas frequentes
+          </h2>
+          <p class="text-base text-preto-puro/80 font-light">
+            Respostas diretas e transparentes sobre o atendimento na clínica.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Pergunta 1 -->
+          <details class="group bg-bege-claro/60 border border-bege-quente rounded-2xl p-6 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-serif text-xl text-preto-puro font-medium">
+              <span>Quais especialidades a clínica oferece?</span>
+              <span class="w-8 h-8 rounded-full bg-marfim border border-bege-quente flex items-center justify-center text-verde-profundo group-open:rotate-180 transition-transform">
+                <svg class="w-4 h-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-bege-quente/40 text-sm sm:text-base text-preto-puro/80 font-light leading-relaxed">
+              A Con Te Odontologia Especializada disponibiliza 8 especialidades em um só lugar: Clínica Geral, Ortodontia, Implantodontia, Endodontia, Periodontia, Harmonização Orofacial, Odontopediatria e Prótese Odontológica.
+            </div>
+          </details>
+
+          <!-- Pergunta 2 -->
+          <details class="group bg-bege-claro/60 border border-bege-quente rounded-2xl p-6 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-serif text-xl text-preto-puro font-medium">
+              <span>Como posso agendar uma avaliação?</span>
+              <span class="w-8 h-8 rounded-full bg-marfim border border-bege-quente flex items-center justify-center text-verde-profundo group-open:rotate-180 transition-transform">
+                <svg class="w-4 h-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-bege-quente/40 text-sm sm:text-base text-preto-puro/80 font-light leading-relaxed">
+              O agendamento é realizado de forma rápida e simples pelo WhatsApp através do número (11) 97204-4184. Basta clicar nos botões de agendamento do site para iniciar a conversa com a nossa equipe.
+            </div>
+          </details>
+
+          <!-- Pergunta 3 -->
+          <details class="group bg-bege-claro/60 border border-bege-quente rounded-2xl p-6 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-serif text-xl text-preto-puro font-medium">
+              <span>Onde fica a Con Te Odontologia Especializada?</span>
+              <span class="w-8 h-8 rounded-full bg-marfim border border-bege-quente flex items-center justify-center text-verde-profundo group-open:rotate-180 transition-transform">
+                <svg class="w-4 h-4 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-bege-quente/40 text-sm sm:text-base text-preto-puro/80 font-light leading-relaxed">
+              Estamos localizados na R. Biágio Cecon, 13 - Jardim Pilar, Mauá - SP, CEP: 09370-030. Um local acessível, pensado para receber você com total comodidade.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. CONTATO E LOCALIZAÇÃO -->
+    <!-- ========================================== -->
+    <section id="contato" class="py-20 lg:py-28 bg-bege-claro/70 border-t border-bege-quente">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Informações de Contato -->
+          <div class="lg:col-span-6 space-y-8">
+            <div class="space-y-3">
+              <span class="text-xs uppercase tracking-widest text-dourado font-bold">Localização & Contato</span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-preto-puro">
+                Venha conhecer nosso espaço
+              </h2>
+              <p class="text-base text-preto-puro/80 font-light">
+                Estamos prontos para acolher você e planejar o melhor cuidado para o seu sorriso.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Endereço -->
+              <div class="flex items-start gap-4 p-5 rounded-2xl bg-marfim border border-bege-quente/70">
+                <div class="w-10 h-10 rounded-xl bg-bege-claro flex items-center justify-center text-dourado shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-verde-profundo uppercase tracking-wider mb-1">Endereço</h3>
+                  <p class="text-base text-preto-puro font-medium">R. Biágio Cecon, 13 - Jardim Pilar</p>
+                  <p class="text-sm text-preto-puro/70 font-light">Mauá - SP, CEP: 09370-030</p>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="flex items-start gap-4 p-5 rounded-2xl bg-marfim border border-bege-quente/70">
+                <div class="w-10 h-10 rounded-xl bg-bege-claro flex items-center justify-center text-dourado shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-verde-profundo uppercase tracking-wider mb-1">WhatsApp</h3>
+                  <a href="https://wa.me/5511972044184" target="_blank" rel="noopener noreferrer" class="text-lg text-preto-puro font-bold hover:text-verde-profundo transition-colors">
+                    (11) 97204-4184
+                  </a>
+                  <p class="text-sm text-preto-puro/70 font-light">Atendimento ágil para agendamentos e esclarecimentos</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botão de Ação Verbatim -->
+            <div>
+              <a 
+                href="https://wa.me/5511972044184" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-verde-profundo text-marfim font-medium text-base hover:bg-verde-escuro transition-all shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-verde-profundo"
+              >
+                <span>Agende sua avaliação e transforme seu sorriso!</span>
+                <svg class="w-5 h-5 ml-2 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Área Reservada para Incorporação do Mapa Real -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl overflow-hidden bg-marfim border border-bege-quente shadow-sm aspect-[4/3] flex flex-col items-center justify-center p-8 text-center">
+              <!-- Elemento decorativo visual de mapa arquitetônico sereno -->
+              <div class="w-16 h-16 rounded-full bg-bege-claro border border-dourado/40 flex items-center justify-center text-verde-profundo mb-4">
+                <svg class="w-8 h-8 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+              </div>
+              <h3 class="font-serif text-2xl text-preto-puro mb-2">Jardim Pilar, Mauá - SP</h3>
+              <p class="text-sm text-preto-puro/75 max-w-sm mb-6 font-light">
+                R. Biágio Cecon, 13 • CEP: 09370-030
+              </p>
+              <div class="px-5 py-2.5 rounded-full bg-bege-claro border border-bege-quente text-xs font-medium text-verde-profundo">
+                Área reservada para integração do mapa de navegação
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 10. RODAPÉ -->
+  <!-- ========================================== -->
+  <footer class="bg-verde-profundo text-marfim border-t border-dourado/20 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-marfim/10">
+        
+        <!-- Coluna Marca e Logo Original -->
+        <div class="md:col-span-5 space-y-6">
+          <a href="#inicio" class="inline-block p-2 rounded-xl bg-marfim/95 max-w-[220px]">
+            <img 
+              src="assets/images/logo.png" 
+              alt="Con Te Odontologia Especializada" 
+              class="h-12 w-auto object-contain"
+            />
+          </a>
+          <p class="text-sm text-marfim/80 font-light max-w-sm leading-relaxed">
+            Odontologia Especializada focada em acolhimento, excelência técnica e cuidado individual em cada detalhe do seu sorriso.
+          </p>
+        </div>
+
+        <!-- Links de Navegação -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-xs uppercase tracking-widest text-dourado font-bold">Navegação</h4>
+          <ul class="space-y-2.5 text-sm text-marfim/85 font-light">
+            <li><a href="#inicio" class="hover:text-dourado transition-colors">Início</a></li>
+            <li><a href="#a-clinica" class="hover:text-dourado transition-colors">A clínica</a></li>
+            <li><a href="#especialidades" class="hover:text-dourado transition-colors">Especialidades</a></li>
+            <li><a href="#equipe" class="hover:text-dourado transition-colors">Equipe</a></li>
+            <li><a href="#contato" class="hover:text-dourado transition-colors">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Informações Oficiais -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs uppercase tracking-widest text-dourado font-bold">Atendimento</h4>
+          <div class="text-sm text-marfim/85 font-light space-y-2">
+            <p><strong class="font-medium text-marfim">Endereço:</strong> R. Biágio Cecon, 13 - Jardim Pilar, Mauá - SP, 09370-030</p>
+            <p><strong class="font-medium text-marfim">WhatsApp:</strong> <a href="https://wa.me/5511972044184" target="_blank" rel="noopener noreferrer" class="hover:text-dourado text-dourado underline underline-offset-4">(11) 97204-4184</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Área Reservada Legal e Direitos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-marfim/60 gap-4">
+        <p>© Con Te Odontologia Especializada. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-6">
+          <span class="hover:text-marfim transition-colors cursor-pointer">Privacidade</span>
+          <span>•</span>
+          <span class="hover:text-marfim transition-colors cursor-pointer">Termos de Uso</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP (Discreto e Acessível) -->
+  <!-- ========================================== -->
+  <aside class="fixed bottom-6 right-6 z-50">
+    <a 
+      href="https://wa.me/5511972044184" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="group flex items-center gap-3 bg-verde-profundo text-marfim p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-lg border border-dourado/40 hover:bg-verde-escuro hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-dourado"
+      aria-label="Falar com a Con Te pelo WhatsApp"
+    >
+      <div class="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-sm">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+        </svg>
+      </div>
+      <span class="hidden sm:inline-block text-xs font-semibold tracking-wide text-marfim group-hover:text-dourado transition-colors">
+        Agendar pelo WhatsApp
+      </span>
+    </a>
+  </aside>
+
+</body>
+</html>
